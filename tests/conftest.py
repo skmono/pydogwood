@@ -1,7 +1,7 @@
 """Shared fixtures for the pydogwood test suite.
 
 The reference is the `third_party/dogwood` git submodule, pinned to dogwood
-v1.1: its `dogwood-docs/examples/` bundles are the test corpus, and its
+v1.1.2: its `dogwood-docs/examples/` bundles are the test corpus, and its
 `dogwood-cli` is the binary the bindings are compared against. Initialize it
 with `git submodule update --init`.
 """

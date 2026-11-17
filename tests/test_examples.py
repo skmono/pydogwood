@@ -1,4 +1,4 @@
-"""The example corpus checks from dogwood v1.1's `dogwood-docs/tests/examples.rs`,
+"""The example corpus checks from dogwood v1.1.2's `dogwood-docs/tests/examples.rs`,
 run through the bindings: every bundle validates, `explain` matches
 `explain.out`, and `replay` matches `expected.out` (trailing whitespace trimmed,
 as upstream does).

@@ -53,7 +53,7 @@ report = pydogwood.replay(
 - The package ships type stubs (`py.typed`), so `format` and `emit` values and
   keyword-only flags are checked by mypy, pyright and editors.
 - `pydogwood.DOGWOOD_VERSION` is the Dogwood CLI version the bindings mirror
-  (e.g. `"1.1.0"`), the equivalent of `dogwood --version`.
+  (e.g. `"1.1.2"`), the equivalent of `dogwood --version`.
 
 See the [Dogwood documentation](https://dogwood-policy.github.io/dogwood/) for
 the policy language, schemas and trace format.
@@ -93,11 +93,11 @@ changing the dependencies in `pyproject.toml`, run `make fresh-requirements` to
 regenerate `requirements.txt` and `requirements.dev.txt`.
 
 The tests use the `third_party/dogwood` git submodule, which is pinned to
-Dogwood v1.1. They check the bindings against its example corpus. They also
-run every function against the v1.1 `dogwood` CLI on the same inputs and
+Dogwood v1.1.2. They check the bindings against its example corpus. They also
+run every function against the v1.1.2 `dogwood` CLI on the same inputs and
 require identical output. The first run builds that CLI from the submodule,
 which takes a few minutes. To use a binary you already have, set
-`DOGWOOD_CLI=/path/to/dogwood`. It must report version `1.1.0`.
+`DOGWOOD_CLI=/path/to/dogwood`. It must report version `1.1.2`.
 
 If you cloned without `--recurse-submodules`, run
 `git submodule update --init`. Building or installing the package does not need

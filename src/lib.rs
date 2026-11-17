@@ -23,7 +23,7 @@ create_exception!(pydogwood, DogwoodError, PyException);
 
 /// The Dogwood CLI version these bindings mirror. Verified against the
 /// reference CLI by the test suite; bump with the Dogwood dependencies.
-const DOGWOOD_VERSION: &str = "1.1.0";
+const DOGWOOD_VERSION: &str = "1.1.2";
 
 /// Output format shared by every command (`"human"` or `"json"`).
 #[derive(Copy, Clone, PartialEq, Eq)]
