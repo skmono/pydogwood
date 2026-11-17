@@ -1,3 +1,4 @@
 [submodule "dogwood"]
 	path = third_party/dogwood
-	url = https://github.com/dogwood-policy/dogwood.git
+    url = https://github.com/dogwood-policy/dogwood.git
+    ignore = untracked

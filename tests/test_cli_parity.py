@@ -1,4 +1,4 @@
-"""Differential tests: each binding against the dogwood v1.1 CLI on the same inputs.
+"""Differential tests: each binding against the dogwood v1.1.2 CLI on the same inputs.
 
 A CLI exit 0 must be a normal return equal to its stdout, with its stderr note
 (from `lower`) raised as `UserWarning`s. A CLI exit 2 must be a `DogwoodError`
@@ -98,6 +98,11 @@ def _cases():
     ]:
         case = Case(f"schema-mcp-{name}", ["schema", "mcp", "--manifest", "-"], pydogwood.schema_mcp, {"manifest": manifest}, stdin=manifest)
         yield pytest.param(case, None, id=case.id)
+    # v1.1.2 bounds action-schema nesting before Cedar's recursive parser runs.
+    deep = "type T = " + "{a: " * 5000 + "Long" + "}" * 5000 + ";\n"
+    case = Case("schema-action-deep", ["schema", "action", "-"], pydogwood.schema_action, {"schema": deep}, stdin=deep)
+    for fmt in case.formats:
+        yield pytest.param(case, fmt, id=f"{case.id}-{fmt}")
 
 
 @pytest.mark.parametrize(("case", "fmt"), list(_cases()))

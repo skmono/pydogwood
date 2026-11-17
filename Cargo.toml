@@ -1,6 +1,6 @@
 [package]
 name = "pydogwood"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 description = "Python bindings for the Dogwood policy CLI"
 license = "Apache-2.0"
@@ -8,9 +8,6 @@ repository = "https://github.com/skmono/pydogwood"
 readme = "README.md"
 # Shipped to PyPI by maturin, never to crates.io.
 publish = false
-# Repo-only files stay out of the sdist. The `third_party/dogwood` submodule
-# (dogwood v1.1) is the test reference only; release builds use the crates.io
-# dependencies below.
 exclude = [
     "/.github",
     "/.gitignore",
@@ -28,8 +25,8 @@ name = "pydogwood"
 crate-type = ["cdylib"]
 
 [dependencies]
-dogwood-formatter = "1.1"
-dogwood-language = "1.1"
+dogwood-formatter = "1.1.2"
+dogwood-language = "1.1.2"
 miette = { version = "7.6", features = ["fancy"] }
 # One abi3 wheel per platform covers CPython 3.9+; free-threaded CPython and
 # PyPy cannot use the stable ABI, so maturin still builds those per version.

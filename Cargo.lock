@@ -484,18 +484,18 @@ dependencies = [
 
 [[package]]
 name = "dogwood-formatter"
-version = "1.1.0"
+version = "1.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0a68cdf7c6b160ee46ef4813d5523a8e426a3345cf4c57d3c796c29b117e2ce6"
+checksum = "95035c839fa2396daa38b20115b9ead85b50e09be454a879fa7c2548a258bfb3"
 dependencies = [
  "dogwood-syntax",
 ]
 
 [[package]]
 name = "dogwood-language"
-version = "1.1.0"
+version = "1.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d806f46dea4d0261710b2fad54679ad4a57be81049e91cbfa7cf638ea2749790"
+checksum = "74c90639521bd33d9527b992ecca02fd8ee821d4aae4a439db89e20191a9b13d"
 dependencies = [
  "cedar-policy",
  "cedar-policy-core",
@@ -518,9 +518,9 @@ dependencies = [
 
 [[package]]
 name = "dogwood-syntax"
-version = "1.1.0"
+version = "1.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "19e9780ff1e99b171e6782df6527f359625cce0ee51b2fd2ce888f5c23fbec0f"
+checksum = "420158054e5b09b4119621cbc2c0e9d58e84948fe958ac4b87b369271e98e22c"
 dependencies = [
  "pest",
  "pest_derive",
@@ -1422,7 +1422,7 @@ dependencies = [
 
 [[package]]
 name = "pydogwood"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "dogwood-formatter",
  "dogwood-language",
